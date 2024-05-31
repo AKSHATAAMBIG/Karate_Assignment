@@ -46,6 +46,7 @@ Feature:
     Given url serviceURL + '/' + '<petId>'
     When method DELETE
     Then status 200
+    And match response.code == 200
     And match response.message == '<petId>'
     And match response.type == 'unknown'
 
